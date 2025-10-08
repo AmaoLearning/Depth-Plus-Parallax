@@ -17,6 +17,10 @@ conda create -n depth-parallax -y python=3.10.18
 conda activate depth-parallax
 
 pip install -r requirements.txt
+
+mkdir checkpoints
+# get pretrained model, 'base' for example
+wget https://huggingface.co/depth-anything/Depth-Anything-V2-Base/resolve/main/depth_anything_v2_vitb.pth?download=true
 ```
 
 Besides Depth Anything V2, additional packages in need are also supplemented in this installation.
@@ -47,6 +51,7 @@ python run.py \
 ```
 
 Options:
+- `--encoder`: Signals which pretrained weights you are going to use, where 'vits' is for 'small', 'vitb' for 'base' and so on. 
 - `--img-path`: You can either 1) point it to an image directory storing all interested images, 2) point it to a single image, or 3) point it to a text file storing all image paths.
 - `--input-size` (optional): By default, we use input size `518` for model inference. ***You can increase the size for even more fine-grained results.***
 - `--pred-only` (optional): Only save the predicted depth map, without raw image.
