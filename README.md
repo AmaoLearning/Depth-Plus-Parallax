@@ -44,7 +44,7 @@ To download pretrained checkpoints, click links below:
 | Depth-Anything-V2-Large | 335.3M | [Download](https://huggingface.co/depth-anything/Depth-Anything-V2-Large/resolve/main/depth_anything_v2_vitl.pth?download=true) |
 | Depth-Anything-V2-Giant | 1.3B | Coming soon |
 
-```bash
+```python
 python run.py \
   --encoder <vits | vitb | vitl | vitg> \
   --img-path <path> --outdir <outdir> \
