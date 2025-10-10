@@ -19,6 +19,7 @@ conda activate depth-parallax
 pip install -r requirements.txt
 
 mkdir checkpoints
+cd checkpoints
 # get pretrained model, 'base' for example
 wget https://huggingface.co/depth-anything/Depth-Anything-V2-Base/resolve/main/depth_anything_v2_vitb.pth?download=true
 ```
